@@ -39,10 +39,9 @@ namespace sparky { namespace graphics {
 		return true;
 	}
 
-	// Returns a bool when the window is closed
-	bool Window::closed() const
+	void Window::clear() const
 	{
-		return glfwWindowShouldClose(m_Window);
+		glClear(GL_COLOR_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 	}
 
 	// Checks GLFW poll events
@@ -50,6 +49,12 @@ namespace sparky { namespace graphics {
 	{
 		glfwPollEvents();
 		glfwSwapBuffers(m_Window);
+	}
+
+	// Returns a bool when the window is closed
+	bool Window::closed() const
+	{
+		return glfwWindowShouldClose(m_Window) == 1;
 	}
 
 } }
