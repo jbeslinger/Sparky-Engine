@@ -1,0 +1,5 @@
+﻿  main.cpp
+  window.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Sparky-core.vcxproj -> C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Debug\Sparky-core.exe
