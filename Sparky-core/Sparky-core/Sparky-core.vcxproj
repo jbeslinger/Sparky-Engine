@@ -71,16 +71,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\Dependencies\GLFW\include;C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\Dependencies\GLEW\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\Dependencies\GLEW\lib;C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\Dependencies\GLFW\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Sparky-core\Dependencies\GLFW\include;$(SolutionDir)Sparky-core\Dependencies\GLEW\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Sparky-core\Dependencies\GLEW\lib;$(SolutionDir)Sparky-core\Dependencies\GLFW\lib-vc2019;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\Dependencies\GLFW\include;C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\Dependencies\GLEW\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\Dependencies\GLEW\lib;C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\Dependencies\GLFW\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Sparky-core\Dependencies\GLFW\include;$(SolutionDir)Sparky-core\Dependencies\GLEW\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Sparky-core\Dependencies\GLEW\lib;$(SolutionDir)Sparky-core\Dependencies\GLFW\lib-vc2019;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>

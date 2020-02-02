@@ -6,7 +6,7 @@ int main()
 	using namespace sparky;
 	using namespace graphics;
 
-	Window window("Hello Window!", 800, 450);
+	Window window("Hello Window!", 480, 270);
 	glClearColor(0.5f, 0.0f, 1.0f, 1.0f);
 
 	while (!window.closed())
