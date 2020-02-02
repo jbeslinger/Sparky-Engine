@@ -9,15 +9,30 @@ int main()
 	Window window("Hello Window!", 480, 270);
 	glClearColor(0.5f, 0.0f, 1.0f, 1.0f);
 
+	// Dumb triangle variables
+	float xOrigin = 0.0f;
+	float yOrigin = 0.0f;
+	float speed = 0.00001f;
+
 	while (!window.closed())
 	{
-		std::cout << window.getWidth() << ", " << window.getHeight() << std::endl;
-
 		window.clear();
+		
+		// Move the triangle
+		if (window.isKeyPressed(GLFW_KEY_RIGHT))
+			xOrigin += speed;
+		else if (window.isKeyPressed(GLFW_KEY_LEFT))
+			xOrigin -= speed;
+		else if (window.isKeyPressed(GLFW_KEY_UP))
+			yOrigin += speed;
+		else if (window.isKeyPressed(GLFW_KEY_DOWN))
+			yOrigin -= speed;
+
+		// Draw triangle
 		glBegin(GL_TRIANGLES);
-		glVertex2f(-0.5f, -0.5f);
-		glVertex2f(0.0f, 0.5f);
-		glVertex2f(0.5f, -0.5f);
+		glVertex2f(xOrigin-0.25f, yOrigin-0.25f);
+		glVertex2f(xOrigin+0.0f, yOrigin+0.25f);
+		glVertex2f(xOrigin+0.25f, yOrigin-0.25f);
 		glEnd();
 
 		window.update();
