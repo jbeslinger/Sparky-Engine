@@ -12,12 +12,16 @@ int main()
 	// Dumb triangle variables
 	float xOrigin = 0.0f;
 	float yOrigin = 0.0f;
-	float speed = 0.00001f;
+	float speed = 0.001f;
 
 	while (!window.closed())
 	{
 		window.clear();
-		
+
+		// Check if mouse button is being pressed
+		if (window.isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT))
+			std::cout << "Left mouse button clicked!" << std::endl;
+
 		// Move the triangle
 		if (window.isKeyPressed(GLFW_KEY_RIGHT))
 			xOrigin += speed;

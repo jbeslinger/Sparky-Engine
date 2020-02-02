@@ -3,12 +3,10 @@
 
 namespace sparky { namespace graphics {
 
-	bool Window::m_Keys[MAX_KEYS];
-	bool Window::m_MouseButtons[MAX_BUTTONS];
-	double Window::mx, Window::my; // Mouse X, mouse Y
-
 	void window_resize(GLFWwindow* window, int width, int height);
 	void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+	void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+	void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
 
 	// Constructor
 	Window::Window(const char *title, int width, int height)
@@ -58,6 +56,8 @@ namespace sparky { namespace graphics {
 		glfwSetWindowUserPointer(m_Window, this);
 		glfwSetWindowSizeCallback(m_Window, window_resize);
 		glfwSetKeyCallback(m_Window, key_callback);
+		glfwSetMouseButtonCallback(m_Window, mouse_button_callback);
+		glfwSetCursorPosCallback(m_Window, cursor_position_callback);
 
 		// Try to initialize GLEW; MUST BE INIT AFTER GLFW
 		if (glewInit() != GLEW_OK)
@@ -71,13 +71,28 @@ namespace sparky { namespace graphics {
 		return true;
 	}
 
-	bool Window::isKeyPressed(unsigned int keycode)
+	bool Window::isKeyPressed(unsigned int keycode) const
 	{
 		// TODO: Log this as error!
 		if (keycode >= MAX_KEYS)
 			return false;
 
 		return m_Keys[keycode];
+	}
+
+	bool Window::isMouseButtonPressed(unsigned int button) const
+	{
+		// TODO: Log this as error!
+		if (button >= MAX_BUTTONS)
+			return false;
+
+		return m_MouseButtons[button];
+	}
+
+	void Window::getMousePosition(double& x, double& y) const
+	{
+		x = mx;
+		y = my;
 	}
 
 	void Window::clear() const
@@ -107,6 +122,19 @@ namespace sparky { namespace graphics {
 	{
 		Window* win = (Window*) glfwGetWindowUserPointer(window);
 		win->m_Keys[key] = action != GLFW_RELEASE;
+	}
+
+	void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+	{
+		Window* win = (Window*)glfwGetWindowUserPointer(window);
+		win->m_MouseButtons[button] = action != GLFW_RELEASE;
+	}
+
+	void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
+	{
+		Window* win = (Window*)glfwGetWindowUserPointer(window);
+		win->mx = xpos;
+		win->my = ypos;
 	}
 
 } }
