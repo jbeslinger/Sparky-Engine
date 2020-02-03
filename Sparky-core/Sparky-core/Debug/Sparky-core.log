@@ -1,2 +1,6 @@
 ﻿  main.cpp
+  vec2.cpp
+  vec3.cpp
+  vec4.cpp
+  Generating Code...
   Sparky-core.vcxproj -> C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Debug\Sparky-core.exe
