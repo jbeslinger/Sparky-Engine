@@ -82,6 +82,16 @@ namespace sparky { namespace math {
 		return divide(other);
 	}
 
+	bool vec2::operator==(const vec2& other)
+	{
+		return x == other.x && y == other.y;
+	}
+
+	bool vec2::operator!=(const vec2& other)
+	{
+		return !(*this == other);
+	}
+
 	std::ostream& operator<<(std::ostream& stream, const vec2& vector)
 	{
 		stream << "(" << vector.x << ", " << vector.y << ")";

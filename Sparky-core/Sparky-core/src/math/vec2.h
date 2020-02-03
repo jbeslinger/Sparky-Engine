@@ -26,6 +26,9 @@ namespace sparky { namespace math {
 		vec2& operator*=(const vec2& other);
 		vec2& operator/=(const vec2& other);
 
+		bool operator==(const vec2& other);
+		bool operator!=(const vec2& other);
+
 		friend std::ostream& operator<<(std::ostream& stream, const vec2& vector);
 	};
 
