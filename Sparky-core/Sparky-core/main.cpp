@@ -11,9 +11,12 @@ int main()
 	Window window("Sparky!", 480, 270);
 	glClearColor(0.5f, 0.0f, 1.0f, 1.0f);
 
-	vec2 myVector(1.0f, 2.0f);
+	vec2 vecA(1.0f, 2.0f);
+	vec2 vecB(4.0f, 6.0f);
 
-	std::cout << myVector << std::endl;
+	vecA *= vecB;
+
+	std::cout << vecA << std::endl;
 	
 	while (!window.closed())
 	{

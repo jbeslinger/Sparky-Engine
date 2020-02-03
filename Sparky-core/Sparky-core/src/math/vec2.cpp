@@ -42,6 +42,46 @@ namespace sparky { namespace math {
 		return *this;
 	}
 
+	vec2& operator+(vec2& left, const vec2& right)
+	{
+		return left.add(right);
+	}
+
+	vec2& operator-(vec2& left, const vec2& right)
+	{
+		return left.subtract(right);
+	}
+
+	vec2& operator*(vec2& left, const vec2& right)
+	{
+		return left.multiply(right);
+	}
+
+	vec2& operator/(vec2& left, const vec2& right)
+	{
+		return left.divide(right);
+	}
+
+	vec2& vec2::operator+=(const vec2& other)
+	{
+		return add(other);
+	}
+	
+	vec2& vec2::operator-=(const vec2& other)
+	{
+		return subtract(other);
+	}
+	
+	vec2& vec2::operator*=(const vec2& other)
+	{
+		return multiply(other);
+	}
+	
+	vec2& vec2::operator/=(const vec2& other)
+	{
+		return divide(other);
+	}
+
 	std::ostream& operator<<(std::ostream& stream, const vec2& vector)
 	{
 		stream << "(" << vector.x << ", " << vector.y << ")";
