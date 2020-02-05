@@ -1,5 +1,6 @@
 #include "src/graphics/window.h"
 #include "src/math/math.h"
+#include "src/utils/fileutils.h"
 
 int main()
 {
