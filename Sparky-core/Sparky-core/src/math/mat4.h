@@ -1,19 +1,28 @@
 #pragma once
 
-#include "vec3.h"
 #include "math_func.h"
+#include "vec3.h"
+#include "vec4.h"
 
 namespace sparky { namespace math {
-
-	float toRadians(float degrees);
 
 	// 4x4 Matrix type definition
 	struct mat4
 	{
-		float elements[4 * 4];
+		union
+		{
+			float elements[4 * 4];
+			vec4 columns[4];
+		};
 
 		mat4();
 		mat4(float diagonal); // Creates a matrix based on main diagonal; https://chortle.ccsu.edu/VectorLessons/vmch13/vmch13_17.html
+
+		vec4 getColumn(int index)
+		{
+			index *= 4;
+			return vec4(elements[index + 0], elements[index + 1], elements[index + 2], elements[index + 3]);
+		}
 
 		static mat4 identity(); // Creates an identity matrix; https://www.varsitytutors.com/hotmath/hotmath_help/topics/identity-matrix
 		

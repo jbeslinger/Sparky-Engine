@@ -31,7 +31,7 @@ namespace sparky { namespace math {
 	{
 		for (int y = 0; y < 4; y++)
 		{
-			for (int x = 0; x < 4; y++)
+			for (int x = 0; x < 4; x++)
 			{
 				float sum = 0.0f;
 				for (int e = 0; e < 4; e++)
