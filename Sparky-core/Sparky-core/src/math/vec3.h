@@ -4,6 +4,7 @@
 
 namespace sparky { namespace math {
 
+	// Vector 3 type definition
 	struct vec3
 	{
 		float x, y, z;

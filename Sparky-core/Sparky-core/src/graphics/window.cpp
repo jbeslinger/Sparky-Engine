@@ -51,7 +51,7 @@ namespace sparky { namespace graphics {
 			std::cout << "Failed to create GLFW window." << std::endl;
 			return false;
 		}
-		
+	
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, this);
 		glfwSetWindowSizeCallback(m_Window, window_resize);
