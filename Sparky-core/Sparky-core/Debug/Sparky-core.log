@@ -1,9 +1,3 @@
-﻿  shader.cpp
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\graphics\shader.cpp(6,13): error C3646: 'm_VertPath': unknown override specifier
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\graphics\shader.cpp(6,13): error C2059: syntax error: '('
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\graphics\shader.cpp(6,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\graphics\shader.cpp(6,36): error C2065: 'fragPath': undeclared identifier
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\graphics\shader.cpp(6,44): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\graphics\shader.cpp(7,2): error C2448: 'sparky::graphics::m_FragPath': function-style initializer appears to be a function definition
-  vec4.cpp
-  Generating Code...
+﻿  main.cpp
+C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\math\math_func.h(10,19): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  Sparky-core.vcxproj -> C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Debug\Sparky-core.exe
