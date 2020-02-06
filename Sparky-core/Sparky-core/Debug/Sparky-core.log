@@ -1,3 +1,5 @@
 ﻿  main.cpp
 C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\math\math_func.h(10,19): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  window.cpp
+  Generating Code...
   Sparky-core.vcxproj -> C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Debug\Sparky-core.exe
