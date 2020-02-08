@@ -1,3 +1,10 @@
-﻿  main.cpp
+﻿  batchrenderer2d.cpp
 C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\math\math_func.h(10,19): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  buffer.cpp
+  static_sprite.cpp
+C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\math\math_func.h(10,19): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Debug\vc120.pdb'; linking object as if no debug info
   Sparky-core.vcxproj -> C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Debug\Sparky-core.exe

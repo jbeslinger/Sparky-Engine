@@ -7,8 +7,9 @@
 #include "src/graphics/buffers/vertexarray.h"
 
 #include "src/graphics/renderer2d.h"
-#include "src/graphics/renderable2d.h"
 #include "src/graphics/simple2drenderer.h"
+
+#include "src/graphics/static_sprite.h"
 
 int main()
 {
@@ -26,8 +27,8 @@ int main()
 	shader.setUniformMat4("pr_matrix", ortho);
 	shader.setUniformMat4("ml_matrix", mat4::translation(vec3(4, 3, 0)));
 
-	Renderable2D sprite1(math::vec3(5, 5, 0), math::vec2(4, 4), math::vec4(1, 0, 1, 1), shader);
-	Renderable2D sprite2(math::vec3(7, 1, 0), math::vec2(2, 3), math::vec4(0.2f, 0, 1, 1), shader);
+	StaticSprite sprite1(5, 5, 4, 4, math::vec4(1, 0, 1, 1), shader);
+	StaticSprite sprite2(7, 1, 2, 3, math::vec4(0.2f, 0, 1, 1), shader);
 	Simple2DRenderer renderer;
 
 	shader.setUniform2f("light_pos", vec2(4.0f, 1.5));
