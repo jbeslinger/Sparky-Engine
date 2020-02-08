@@ -1,7 +1,8 @@
-﻿  batchrenderer2d.cpp
+﻿  main.cpp
 C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\math\math_func.h(10,19): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-  buffer.cpp
-  static_sprite.cpp
+C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\main.cpp(37,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\main.cpp(79,21): warning C4018: '<': signed/unsigned mismatch
+  batchrenderer2d.cpp
 C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\math\math_func.h(10,19): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
   Generating Code...
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
