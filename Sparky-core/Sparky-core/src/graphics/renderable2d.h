@@ -5,6 +5,7 @@
 #include "buffers/vertexarray.h"
 
 #include "../math/math.h"
+#include "shader.h"
 
 namespace sparky { namespace graphics {
 
@@ -17,19 +18,20 @@ namespace sparky { namespace graphics {
 
 		VertexArray* m_VertexArray;
 		IndexBuffer* m_IndexBuffer;
+		Shader& m_Shader;
 
-	protected:
-		Renderable2D(math::vec3 position, math::vec2 size, math::vec4 color)
-			: m_Position(position), m_Size(size), m_Color(color)
+	public:
+		Renderable2D(math::vec3 position, math::vec2 size, math::vec4 color, Shader& shader)
+			: m_Position(position), m_Size(size), m_Color(color), m_Shader(shader)
 		{
 			m_VertexArray = new VertexArray();
 			
 			GLfloat vertices[] =
 			{
-				0,				0,				0,
-				0,				position.y,		0,
-				position.x,		position.y,		0,
-				position.x,		0,				0
+				0,			0,			0,
+				0,			size.y,		0,
+				size.x,		size.y,		0,
+				size.x,		0,			0
 			};
 
 			GLfloat colors[] =
@@ -52,6 +54,11 @@ namespace sparky { namespace graphics {
 			delete m_VertexArray;
 			delete m_IndexBuffer;
 		}
+
+		inline const VertexArray* getVAO() const { return m_VertexArray; }
+		inline const IndexBuffer* getIBO() const { return m_IndexBuffer; }
+
+		inline Shader& getShader() const { return m_Shader; }
 
 		inline const math::vec3& getPosition() const { return m_Position; }
 		inline const math::vec2& getSize() const { return m_Size; }
