@@ -1,8 +1,1 @@
-﻿  main.cpp
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\src\math\math_func.h(10,19): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\Dependencies\GLFW\include\GLFW\glfw3.h(123): message : see previous definition of 'APIENTRY'
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\main.cpp(38,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\main.cpp(59,51): warning C4305: 'argument': truncation from 'double' to 'const float'
-C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Sparky-core\main.cpp(83,21): warning C4018: '<': signed/unsigned mismatch
-  Sparky-core.vcxproj -> C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Debug\Sparky-core.exe
+﻿  Sparky-core.vcxproj -> C:\Users\jbesl\Source\Repos\Sparky-Engine\Sparky-core\Debug\Sparky-core.exe

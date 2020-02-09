@@ -28,7 +28,7 @@ int main()
 	// glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
 	mat4 ortho = mat4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f);
-	
+
 	Shader shader("src/shaders/basic.vert", "src/shaders/basic.frag");
 	shader.enable();
 	shader.setUniformMat4("pr_matrix", ortho);
@@ -49,9 +49,9 @@ int main()
 #endif
 				(x, y, 0.08f, 0.08f, math::vec4(rand() % 1000 / 1000.0f, 0, 1, 1)
 #if !BATCH_RENDERER				
-				, shader
+					, shader
 #endif
-				));
+					));
 		}
 	}
 
@@ -68,11 +68,12 @@ int main()
 	shader.setUniform2f("light_pos", vec2(4.0f, 1.5));
 	shader.setUniform4f("light_col", vec4(0.2f, 0.3f, 0.8f, 1.0f));
 
-	Timer timer;
+	Timer time;
+	float timer = 0.0f;
+	unsigned int frames = 0;
 
 	while (!window.closed())
 	{
-		timer.reset();
 		window.clear();
 		double x, y;
 		window.getMousePosition(x, y);
@@ -82,15 +83,20 @@ int main()
 #endif
 		for (int i = 0; i < sprites.size(); i++)
 		{
-		renderer.submit(sprites[i]);
+			renderer.submit(sprites[i]);
 		}
 #if BATCH_RENDERER
 		renderer.end();
 #endif
 		renderer.flush();
 		window.update();
-		
-		printf("%fms\n", timer.elapsed() * 1000.0);
+		frames++;
+		if (time.elapsed() - timer > 1.0f)
+		{
+			timer += 1.0f;
+			printf("%dfps\n", frames);
+			frames = 0;
+		}
 	}
 
 	return 0;
