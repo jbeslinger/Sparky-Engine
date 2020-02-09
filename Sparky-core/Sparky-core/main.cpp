@@ -74,6 +74,11 @@ int main()
 
 	while (!window.closed())
 	{
+		mat4 mat = mat4::translation(vec3(5, 5, 5));
+		mat *=  mat4::rotation(time.elapsed() * 50.0f, vec3(0, 0, 1));
+		mat *=  mat4::translation(vec3(-5, -5, -5));
+		shader.setUniformMat4("ml_matrix", mat);
+
 		window.clear();
 		double x, y;
 		window.getMousePosition(x, y);

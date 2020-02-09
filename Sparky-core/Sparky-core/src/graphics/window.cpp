@@ -3,6 +3,8 @@
 
 namespace sparky { namespace graphics {
 
+	#define VSYNC 1.0 // This turns Vsync on or off; 0.0 - off, 1.0 - on
+
 	void window_resize(GLFWwindow* window, int width, int height);
 	void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 	void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
@@ -58,6 +60,7 @@ namespace sparky { namespace graphics {
 		glfwSetKeyCallback(m_Window, key_callback);
 		glfwSetMouseButtonCallback(m_Window, mouse_button_callback);
 		glfwSetCursorPosCallback(m_Window, cursor_position_callback);
+		glfwSwapInterval(VSYNC);
 
 		// Try to initialize GLEW; MUST BE INIT AFTER GLFW
 		if (glewInit() != GLEW_OK)
