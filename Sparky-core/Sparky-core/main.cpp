@@ -12,6 +12,7 @@
 
 #include "src/graphics/static_sprite.h"
 #include "src/graphics/sprite.h"
+#include "src/utils/timer.h"
 
 #include <time.h>
 
@@ -67,8 +68,11 @@ int main()
 	shader.setUniform2f("light_pos", vec2(4.0f, 1.5));
 	shader.setUniform4f("light_col", vec4(0.2f, 0.3f, 0.8f, 1.0f));
 
+	Timer timer;
+
 	while (!window.closed())
 	{
+		timer.reset();
 		window.clear();
 		double x, y;
 		window.getMousePosition(x, y);
@@ -84,8 +88,9 @@ int main()
 		renderer.end();
 #endif
 		renderer.flush();
-
 		window.update();
+		
+		printf("%fms\n", timer.elapsed() * 1000.0);
 	}
 
 	return 0;

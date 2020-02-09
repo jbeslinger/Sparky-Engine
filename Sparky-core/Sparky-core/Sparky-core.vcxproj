@@ -178,6 +178,7 @@
     <ClInclude Include="src\math\vec3.h" />
     <ClInclude Include="src\math\vec4.h" />
     <ClInclude Include="src\utils\fileutils.h" />
+    <ClInclude Include="src\utils\timer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\shaders\basic.frag" />
